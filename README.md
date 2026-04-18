@@ -3,7 +3,9 @@
 Foster consistency with intuitive and configurable data-driven heatmaps that support custom frontmatter properties, colour themes, and limitless functionality customisation with JavaScript scoring formulas.
 
 ## Showcase
-Heatmaps are compatible with any theme background color and support dark/light appearance.
+Heatmaps are defined with simple inline `heatmap` code-blocks and customised with [properties](#properties) within, whereas entries and colour-intensity are calculated using the frontmatter properties of your specified notes. 
+
+Compatible with any theme background color and support dark/light appearance.
 
 ![[Showcase Banner]](/images/banner.png)
 
