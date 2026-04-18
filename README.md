@@ -7,6 +7,8 @@ Heatmaps are compatible with any theme background color and support dark/light a
 
 ![[Showcase Banner]](/images/banner.png)
 
+![[Showcase Banner Yellow]](/images/banner-yellow-heatmap.png)
+
 ## How to Install
 Download the `/daniels-heatmaps` folder from within this repository from GitHub and deposit it as folder within your Obsidian vault under `{Vault Name}/.obsidian/plugins/`. Then, enable the plugin within the Community Plugins section, where it should by now already show as installed.
 
@@ -29,7 +31,7 @@ You can orchestrate the heatmap to fit your indiviual requirements using its ava
 #### Required Properties
 - `folder [string]` Path to folder containing your notes. The heatmap uses the Obsidian-internal creation timestamp of notes instead of any frontmatter properties. (So that when you miss a day completely, you will be held accountable for it in the heatmap >:)
 - `color [string]` Hex color, with which entries with a full score are assigned. Color shades for lesser scores are automatically generated off this color.
-- `score [function]` Arrow function that must return a score value between `0` and `1`. Algorhytm to get there is freely customisable in JavaScript. All frontmatter fields of the notes in your specified `folder` can be accessed through the `props` element via `props.{property name}`. See [this section](#scoring-algorithm-examples) for compact examples.
+- `score [function]` Arrow function that must return a score value between `0` and `1`. Algorhytm to get there is freely customisable in JavaScript. All frontmatter fields of the notes in your specified `folder` can be accessed through the `props` element via `props.propertyName`, or `props["property name"]`. The latter is compatible with multi-word property labels and therefore recommended. See [this section](#scoring-algorithm-examples) for compact examples.
 
 #### Optional Properties
 - `navVisible [boolean]` Toggle visibility of the year navigator above the heatmap. (default: `true`)
