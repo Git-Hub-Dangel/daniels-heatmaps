@@ -1,0 +1,9 @@
+{
+  "id": "daniels-heatmaps",
+  "name": "Daniel's Heatmaps",
+  "version": "1.2.0",
+  "minAppVersion": "1.0.0",
+  "description": "Embed custom data-driven heatmaps in your notes.",
+  "author": "Daniel",
+  "isDesktopOnly": false
+}

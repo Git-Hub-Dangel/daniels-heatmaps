@@ -1,0 +1,206 @@
+/* ── Container ── */
+.dh-container {
+	position: relative;
+	padding: 10px 0;
+}
+
+/* ── Header (nav + title) ── */
+.dh-header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+/* Nav position variants */
+.dh-header-left {
+	justify-content: flex-start;
+}
+
+.dh-header-center {
+	justify-content: center;
+}
+
+.dh-header-right {
+	justify-content: flex-end;
+}
+
+.dh-nav {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-shrink: 0;
+}
+
+.dh-nav-btn {
+	background: none;
+	border: 1px solid var(--background-modifier-border);
+	cursor: pointer;
+	font-size: 12px;
+	padding: 2px 8px;
+	border-radius: 4px;
+	color: var(--text-muted);
+	line-height: 1;
+}
+
+.dh-nav-btn:hover {
+	background: var(--background-modifier-hover);
+	color: var(--text-normal);
+}
+
+.dh-nav-year {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--text-normal);
+	min-width: 44px;
+	text-align: center;
+	user-select: none;
+}
+
+/* ── Scroll wrapper ── */
+.dh-scroll-wrapper {
+	overflow-x: auto;
+	padding-bottom: 4px;
+}
+
+.dh-grid-wrapper {
+	display: inline-block;
+}
+
+/* ── Month labels ── */
+.dh-month-labels {
+	position: relative;
+	height: 16px;
+	margin-bottom: 4px;
+}
+
+.dh-month-label {
+	position: absolute;
+	font-size: 10px;
+	color: var(--text-muted);
+	top: 0;
+	user-select: none;
+}
+
+/* ── Grid ── */
+.dh-grid {
+	position: relative;
+}
+
+/* ── Cells ── */
+.dh-cell {
+	position: absolute;
+	width: 11px;
+	height: 11px;
+	border-radius: 2px;
+	cursor: default;
+}
+
+.dh-cell-filled:hover {
+	outline: 1px solid var(--text-normal);
+	outline-offset: -1px;
+	cursor: pointer;
+}
+
+/* ── Empty cell month shading (light theme) ── */
+.dh-cell-empty-odd {
+	background-color: #ebedf0;
+}
+
+.dh-cell-empty-even {
+	background-color: #d0d7de;
+}
+
+/* ── Today marker ── */
+.dh-cell-today {
+	outline: 1px solid #586069;
+	outline-offset: -1px;
+}
+
+/* ── Tooltip ── */
+.dh-tooltip {
+	display: none;
+	position: absolute;
+	background: var(--background-secondary);
+	color: var(--text-normal);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 8px;
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 1.4;
+	box-shadow: 0 2px 8px var(--background-modifier-box-shadow);
+	z-index: 9999;
+	pointer-events: none;
+	white-space: nowrap;
+	transform: translate(-50%, -100%);
+}
+
+.dh-tooltip-visible {
+	display: block;
+}
+
+/* ── Error ── */
+.dh-error {
+	color: var(--text-error, #000000);
+	padding: 10px 14px;
+	border: 1px solid var(--background-modifier-error-hover, #e74c3c);
+	border-radius: 4px;
+	font-size: 13px;
+	background: var(--background-modifier-error, rgba(231, 76, 60, 0.1));
+	margin-bottom: 6px;
+}
+
+.dh-error-heading {
+	font-weight: 600;
+	margin-bottom: 4px;
+}
+
+.dh-error-list {
+	margin: 0;
+	padding-left: 18px;
+}
+
+.dh-error-list li {
+	margin-bottom: 2px;
+	line-height: 1.5;
+}
+
+/* ── Warnings ── */
+.dh-warning {
+	color: var(--text-warning, #000000);
+	padding: 10px 14px;
+	border: 1px solid var(--text-warning, #b58900);
+	border-radius: 4px;
+	font-size: 13px;
+	background: rgba(181, 137, 0, 0.08);
+	margin-bottom: 8px;
+}
+
+.dh-warning-heading {
+	font-weight: 600;
+	margin-bottom: 4px;
+}
+
+.dh-warning-list {
+	margin: 0;
+	padding-left: 18px;
+}
+
+.dh-warning-list li {
+	margin-bottom: 2px;
+	line-height: 1.5;
+}
+
+/* ════════════════════════════════════════
+   Dark theme overrides
+   ════════════════════════════════════════ */
+.theme-dark .dh-cell-empty-odd {
+	background-color: #161b22;
+}
+
+.theme-dark .dh-cell-empty-even {
+	background-color: #1e252e;
+}
+
+.theme-dark .dh-cell-today {
+	outline-color: #768390;
+}
